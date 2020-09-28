@@ -12,7 +12,9 @@ private:
 	map<int, Block> blockTable;
 public:
 	BlockTable(vector<int> blocksizes);
+	map<int, Block>* getBlockTable();
 	Block* findBestFitFreeBlock(int jobSize);
+	void assignBlock(Block* block);
 	void freeBlock(Block* block);
 };
 

@@ -4,35 +4,55 @@
 #include <iostream>
 #include <map>
 #include "Block.hpp"
+#include "BlockTable.hpp"
 using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
-    map<int,double> map1;
 
-    map1.insert({ 5,5.0 });
-    map1.insert({ 4,4.0 });
-    map1.insert({ 3,3.0 });
-    map1.insert({ 0,0.0 });
-    map1.insert({ 1,1.0 });
-    map1.insert({ 2,2.0 });
+    vector<int> inPutBlockSizes;
+    inPutBlockSizes.push_back(17);
+    inPutBlockSizes.push_back(8);
+    inPutBlockSizes.push_back(34);
 
-    cout << "\nThe map is:\n";
-    cout << "\nThe map is:\n";
+    BlockTable blockTable(inPutBlockSizes);
+    map<int, Block>* ptr_blockTable = blockTable.getBlockTable();
+    Block* block;
+    cout << "------------------------------------------------------------------\nORIGINAL\n";
+    for (auto iterator = ptr_blockTable->begin(); iterator != ptr_blockTable->end(); ++iterator) {
+        cout << "\nID: " << iterator->first << "\t Start: " << iterator->second.getStart() << "\t End: " << iterator->second.getEnd() << "\t Size: " << iterator->second.getSize() << "\t Busy: " << iterator->second.getBusy() << "\n";
+    }
+    cout << "------------------------------------------------------------------\nADDING 35\n";
 
+    block = blockTable.findBestFitFreeBlock(35);
+    if (block == NULL) { cout << "that wont fit"; }
+    else { blockTable.assignBlock(block); }
+    for (auto iterator = ptr_blockTable->begin(); iterator != ptr_blockTable->end(); ++iterator) {
+        cout << "\nID: " << iterator->first << "\t Start: " << iterator->second.getStart() << "\t End: " << iterator->second.getEnd() << "\t Size: " << iterator->second.getSize() << "\t Busy: " << iterator->second.getBusy() << "\n";
+    }
+    cout << "------------------------------------------------------------------\nADDING 15\n";
 
+    block = blockTable.findBestFitFreeBlock(15);
+    if (block == NULL) { cout << "that wont fit"; }
+    else { blockTable.assignBlock(block); }
+    for (auto iterator = ptr_blockTable->begin(); iterator != ptr_blockTable->end(); ++iterator) {
+        cout << "\nID: " << iterator->first << "\t Start: " << iterator->second.getStart() << "\t End: " << iterator->second.getEnd() << "\t Size: " << iterator->second.getSize() << "\t Busy: " << iterator->second.getBusy() << "\n";
+    }
+    cout << "------------------------------------------------------------------\nADDING 9\n";
 
+    block = blockTable.findBestFitFreeBlock(9);
+    if (block == NULL) { cout << "that wont fit"; }
+    else { blockTable.assignBlock(block); }
+    for (auto iterator = ptr_blockTable->begin(); iterator != ptr_blockTable->end(); ++iterator) {
+        cout << "\nID: " << iterator->first << "\t Start: " << iterator->second.getStart() << "\t End: " << iterator->second.getEnd() << "\t Size: " << iterator->second.getSize() << "\t Busy: " << iterator->second.getBusy() << "\n";
+    }
+    cout << "------------------------------------------------------------------\nADDING 12\n";
 
+    block = blockTable.findBestFitFreeBlock(12);
+    if (block == NULL) { cout << "that wont fit"; }
+    else { blockTable.assignBlock(block); }
+    for (auto iterator = ptr_blockTable->begin(); iterator != ptr_blockTable->end(); ++iterator) {
+        cout << "\nID: " << iterator->first << "\t Start: " << iterator->second.getStart() << "\t End: " << iterator->second.getEnd() << "\t Size: " << iterator->second.getSize() << "\t Busy: " << iterator->second.getBusy() << "\n";
+    }
+    cout << "------------------------------------------------------------------\n";
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
