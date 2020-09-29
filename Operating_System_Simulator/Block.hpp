@@ -21,6 +21,4 @@ public:
 	void setSize(int size);
 	void setBusy(bool busy);
 };
-
-
 #endif // !Block_H

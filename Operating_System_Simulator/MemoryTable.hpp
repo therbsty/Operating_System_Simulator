@@ -15,5 +15,4 @@ public:
 	void setInstruction(int address, string instruction);
 
 };
-
 #endif // !MemoryTable_H

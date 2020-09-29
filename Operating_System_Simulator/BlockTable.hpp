@@ -1,11 +1,10 @@
-#include "Block.hpp"
+#ifndef BlockTable_H
+#define BlockTable_H
 #include <iterator> 
 #include <map> 
 #include <vector>
+#include "Block.hpp"
 using namespace std;
-
-#ifndef BlockTable_H
-#define BlockTable_H
 
 class BlockTable {
 private:
@@ -17,5 +16,4 @@ public:
 	void assignBlock(Block* block);
 	void freeBlock(Block* block);
 };
-
 #endif // !BlockTable_H
