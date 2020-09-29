@@ -24,12 +24,24 @@
     <ClCompile Include="BlockTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MemoryTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="BlockTable.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryTable.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Tests.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

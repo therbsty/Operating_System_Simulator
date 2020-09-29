@@ -141,11 +141,15 @@
   <ItemGroup>
     <ClCompile Include="Block.cpp" />
     <ClCompile Include="BlockTable.cpp" />
+    <ClCompile Include="MemoryTable.cpp" />
     <ClCompile Include="Operating_System_Simulator_Driver.cpp" />
+    <ClCompile Include="Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Block.hpp" />
     <ClInclude Include="BlockTable.hpp" />
+    <ClInclude Include="MemoryTable.hpp" />
+    <ClInclude Include="Tests.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
