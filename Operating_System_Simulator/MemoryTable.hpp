@@ -1,19 +1,19 @@
-/*#ifndef MemoryTable_H
+#ifndef MemoryTable_H
 #define MemoryTable_H
 #include <string>
-#include <array>
+#include <vector>
 using namespace std;
 
 class MemoryTable {
 private:
-	string* memoryList;
+	vector<string> memoryList;
 public:
 	MemoryTable(int memorySize);
-	string* getMemoryList();
+	int getMemoryListSize();
+	vector<string>* getMemoryList();
 	string getInstruction(int address);
 	void setInstruction(int address, string instruction);
 
 };
 
 #endif // !MemoryTable_H
-*/

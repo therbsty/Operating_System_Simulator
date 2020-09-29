@@ -1,22 +1,23 @@
-/*#include <iterator> 
-#include <map> 
-#include <array>
 #include <string>
 #include "MemoryTable.hpp"
 using namespace std;
 
 MemoryTable::MemoryTable(int memorySize) {
-	memoryList = new string[];
+	memoryList.resize(memorySize, "");
 }
 
-string* MemoryTable::getMemoryList() {
-	return memoryList;
+int MemoryTable::getMemoryListSize() {
+	return memoryList.size();
+}
+
+vector<string>* MemoryTable::getMemoryList() {
+	return &memoryList;
 }
 
 string MemoryTable::getInstruction(int address) {
-
+	return this->memoryList[address];
 }
 
 void MemoryTable::setInstruction(int address, string instruction) {
-
-}*/
+	this->memoryList[address] = instruction;
+}
