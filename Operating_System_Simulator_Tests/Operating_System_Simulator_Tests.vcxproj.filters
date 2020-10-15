@@ -15,28 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Operating_System_Simulator_Driver.cpp">
+    <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Block.cpp">
+    <ClCompile Include="BlockTableTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BlockTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MemoryTable.cpp">
+    <ClCompile Include="MemoryTableTests.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Block.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="BlockTable.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MemoryTable.hpp">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
